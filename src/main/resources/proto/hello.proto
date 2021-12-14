@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+// 生成的包名
+option java_package = "com.zpb.protobuf.proto.hello";
+
+// 生成的java名
+option java_outer_classname = "User";
+
+// 生成多个class文件
+option java_multiple_files = true;
+
+message UserRequest {
+  string username = 1;
+}
+
+message UserResponse {
+  string username = 1;
+  int64 age = 2;
+  string dept = 3;
+  string job = 4;
+}

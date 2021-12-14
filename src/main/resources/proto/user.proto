@@ -1,0 +1,80 @@
+//使用 proto3 语法 ,未指定则使用proto2
+syntax = "proto3";
+
+//生成 proto 文件所在包路径
+package com.zpb.protobuf.proto.user;
+
+//生成 proto 文件所在包路径
+option java_package = "com.zpb.protobuf.proto.user";
+
+//生成java文件名，注意不能和文件名重复
+option java_outer_classname="UserOutClass";
+
+// 引入外部proto对象
+import "demo.proto";
+
+// 是否生成多个java文件 true: 生成多个文件 false: 生成一个类,包含内部类
+option java_multiple_files = true;
+
+// 是否生成equals和hashcode方法 true:生成 false:默认值，不生成
+option java_generate_equals_and_hash = true;
+
+//创建一个 User 对象
+message User{
+
+  // int64
+  int64 id = 1;
+
+  // int32
+  int32 age = 2;
+
+  // float
+  float price = 3;
+
+  // double
+  double salary = 4;
+
+  // bool
+  bool isDeleted = 5;
+
+  // String
+  string name = 6;
+
+  // 对象中引用-对象
+  NickName nickName = 9;
+
+  // 对象中引用-List<string>
+  repeated string strLing = 10;
+
+  // 对象中引用-List<Object>
+  repeated demo.Demo List = 11;
+
+  // 对象中引用-Map<string,string>
+  map<string,string> strMap = 12;
+
+  // 对象中引用-Map<string,Object>
+  map<string,UserMapPO> objMap = 13;
+
+}
+
+message UserList {
+  // list 对象
+  repeated User user = 7;
+
+}
+
+message UserMap {
+  // map 对象
+  map<int64,UserMapPO> userMap = 8;
+}
+
+message UserMapPO {
+  int64 id = 1;
+  User user = 7;
+}
+
+message NickName {
+  string nickName = 6;
+}
+
+
