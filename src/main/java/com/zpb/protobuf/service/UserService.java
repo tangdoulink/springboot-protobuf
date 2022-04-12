@@ -1,6 +1,6 @@
 package com.zpb.protobuf.service;
 
-import com.zpb.protobuf.proto.hello.UserResponse;
+import com.zpb.protobuf.test.hello.UserResponse;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;

@@ -1,7 +1,7 @@
 package com.zpb.protobuf.controller;
 
-import com.zpb.protobuf.proto.hello.UserRequest;
-import com.zpb.protobuf.proto.hello.UserResponse;
+import com.zpb.protobuf.test.hello.UserRequest;
+import com.zpb.protobuf.test.hello.UserResponse;
 import com.zpb.protobuf.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,7 +1,7 @@
-package com.zpb.protobuf.proto;
+package com.zpb.protobuf.test;
 
 import com.google.protobuf.util.JsonFormat;
-import com.zpb.protobuf.proto.demo.Demo;
+import com.zpb.protobuf.test.demo.Demo;
 
 import java.util.Arrays;
 
