@@ -1,0 +1,6 @@
+### 1.hello-request
+POST http://localhost:8080/getUser
+Content-Type: application/json
+
+{"username":"李四"}
+

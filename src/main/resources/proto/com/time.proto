@@ -1,0 +1,28 @@
+// 使用 proto3 语法 ,未指定则使用proto2
+syntax = "proto3";
+
+// 是否生成多个java文件 true: 生成多个文件 false: 生成一个类,包含内部类
+option java_multiple_files = true;
+
+// 是否生成equals和hashcode方法 true:生成 false:默认值，不生成
+option java_generate_equals_and_hash = true;
+
+// 是否生成service服务
+option java_generic_services = true;
+
+// 生成 proto 文件所在包路径
+package com.zpb.protobuf.proto.time;
+
+// 生成 proto 文件所在包路径
+option java_package = "com.zpb.protobuf.proto.time";
+
+// 生成 proto 文件名
+option java_outer_classname="TimeProto";
+
+// 引入其它包
+import "google/protobuf/timestamp.proto";
+
+message MyTime {
+  google.protobuf.Timestamp time = 1;
+}
+
